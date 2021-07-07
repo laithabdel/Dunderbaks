@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_menu"
-        android:name="com.android.dunderbaks.ui.notifications.MenuFragment"
+        android:name="com.android.dunderbaks.ui.menu.MenuFragment"
         android:label="Menu"
         tools:layout="@layout/fragment_menu" />
 </navigation>
