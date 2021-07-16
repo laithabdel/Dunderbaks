@@ -2,6 +2,8 @@ package com.android.dunderbaks.ui.dashboard;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import com.android.dunderbaks.R;
@@ -19,7 +22,9 @@ import com.android.dunderbaks.R;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
+import java.io.IOException;
 import java.util.regex.Pattern;
 
 public class TapListFragment extends Fragment {
@@ -29,45 +34,49 @@ public class TapListFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_tap_list, container, false);
-
         WebView webView = root.findViewById(R.id.wvTapList);
-        webView.getSettings().setDomStorageEnabled(true);
+        webView.clearCache(true);
+//        webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setJavaScriptEnabled(true);
         MyJavaScriptInterface jInterface = new MyJavaScriptInterface(root.getContext());
         webView.addJavascriptInterface(jInterface, "HtmlViewer");
-        webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
-             @Override
-             public void onPageFinished(WebView view, String url) {
-                 //Load HTML
-                 webView.loadUrl("javascript:HtmlViewer.showHTML(document.getElementsByTagName('body')[0].innerHTML);");
-             }
+                return true;
+            }
+
+            @Override
+            public void onPageStarted(WebView view, String url,
+                                      Bitmap favicon) {
+            }
+
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                view.evaluateJavascript("javascript:for(let i = 10001; i < 10067; i++)" +
+                        "document.getElementById('InfoIdx' + i).click();",
+                        null);
+                view.evaluateJavascript("javascript:setTimeout(window.HtmlViewer.showHTML(document.getElementsByTagName('body')[0].innerHTML), 1000);", null);
+
+
+//                webView.loadUrl("javascript:window.HtmlViewer.showHTML(document.getElementsByTagName('script')[3].innerHTML)");
+                new Thread(() -> {
+                     while (jInterface.html == null);
+//                     System.out.println(jInterface.html);
+                     Document doc = Jsoup.parse(jInterface.getHtml());
+                     Elements beerNames = doc.select("span.BName");
+                     Elements beerInfos = doc.select("span.BI");
+                     for (int i = 0; i < beerNames.size(); i++) {
+                         System.out.println(beerNames.get(i).text());
+                         System.out.println(beerInfos.get(i).text());
+                     }
+                }).start();
+            }
          });
 
-
         webView.loadUrl("https://www.buildabeer.org/WhatsOnTapAt/WhatsOnTapAtApp.php?BarID=USAFL00014");
-
-
-        new Thread(() -> {
-            System.out.println("Thread is open");
-
-            try {
-                Document document = Jsoup.connect("https://www.buildabeer.org/WhatsOnTapAt/WhatsOnTapAtApp.php?BarID=USAFL00014")
-                        .timeout(6000)
-                        .get();
-
-                Element script = document.select("script").first();
-
-//                System.out.println(document.html());
-
-
-
-
-
-            } catch (Exception ignored) {}
-        }).start();
-
 
 
         return root;
@@ -83,10 +92,14 @@ public class TapListFragment extends Fragment {
         }
 
         @JavascriptInterface
+        @SuppressWarnings("unused")
         public void showHTML(String _html) {
             html = _html;
-            System.out.println(html);
 
+        }
+
+        public String getHtml() {
+            return html;
         }
     }
 }
