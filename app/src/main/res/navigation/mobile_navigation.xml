@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.android.dunderbaks.ui.home.HomeFragment"
+        android:name="com.android.dunderbaks.core.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_tap_list"
-        android:name="com.android.dunderbaks.ui.dashboard.TapListFragment"
+        android:name="com.android.dunderbaks.core.dashboard.TapListFragment"
         android:label="Tap List"
         tools:layout="@layout/fragment_tap_list" />
 
     <fragment
         android:id="@+id/navigation_menu"
-        android:name="com.android.dunderbaks.ui.menu.MenuFragment"
+        android:name="com.android.dunderbaks.core.menu.MenuFragment"
         android:label="Menu"
         tools:layout="@layout/fragment_menu" />
 </navigation>

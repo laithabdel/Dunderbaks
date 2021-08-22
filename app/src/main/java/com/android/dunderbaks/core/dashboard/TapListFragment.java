@@ -1,4 +1,4 @@
-package com.android.dunderbaks.ui.dashboard;
+package com.android.dunderbaks.core.dashboard;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
-import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -21,11 +20,7 @@ import com.android.dunderbaks.R;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import java.io.IOException;
-import java.util.regex.Pattern;
 
 public class TapListFragment extends Fragment {
 

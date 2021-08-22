@@ -1,4 +1,4 @@
-package com.android.dunderbaks.ui.model;
+package com.android.dunderbaks.core.model;
 
 public class TapListItem {
 

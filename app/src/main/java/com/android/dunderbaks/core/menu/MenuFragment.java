@@ -1,4 +1,4 @@
-package com.android.dunderbaks.ui.menu;
+package com.android.dunderbaks.core.menu;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,11 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.dunderbaks.R;
-import com.android.dunderbaks.ui.adapter.MenuItemAdapter;
-import com.android.dunderbaks.ui.data.MenuData;
-import com.android.dunderbaks.ui.model.MenuItem;
+import com.android.dunderbaks.core.adapter.MenuItemAdapter;
+import com.android.dunderbaks.core.data.MenuData;
+import com.android.dunderbaks.core.model.MenuItem;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MenuFragment extends Fragment {

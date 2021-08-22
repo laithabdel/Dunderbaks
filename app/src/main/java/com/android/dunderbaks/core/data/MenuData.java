@@ -1,7 +1,7 @@
-package com.android.dunderbaks.ui.data;
+package com.android.dunderbaks.core.data;
 
 import com.android.dunderbaks.R;
-import com.android.dunderbaks.ui.model.MenuItem;
+import com.android.dunderbaks.core.model.MenuItem;
 
 import java.util.LinkedList;
 import java.util.List;

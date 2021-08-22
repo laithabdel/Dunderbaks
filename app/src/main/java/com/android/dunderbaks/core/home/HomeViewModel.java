@@ -1,4 +1,4 @@
-package com.android.dunderbaks.ui.home;
+package com.android.dunderbaks.core.home;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

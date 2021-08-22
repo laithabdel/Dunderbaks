@@ -1,16 +1,13 @@
-package com.android.dunderbaks.ui.details;
+package com.android.dunderbaks.core.details;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.dunderbaks.R;
-import com.android.dunderbaks.ui.model.MenuItem;
-
-import org.w3c.dom.Text;
+import com.android.dunderbaks.core.model.MenuItem;
 
 public class DetailsActivity extends AppCompatActivity {
 
