@@ -24,7 +24,7 @@ import org.jsoup.select.Elements;
 
 public class TapListFragment extends Fragment {
 
-    @SuppressLint("AddJavascriptInterface")
+    @SuppressLint({"AddJavascriptInterface", "SetJavaScriptEnabled"})
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -62,10 +62,10 @@ public class TapListFragment extends Fragment {
 //                     System.out.println(jInterface.html);
                      Document doc = Jsoup.parse(jInterface.getHtml());
                      Elements beerNames = doc.select("span.BName");
-                     Elements beerInfos = doc.select("span.BI");
+                     Elements beerInfo = doc.select("span.BI");
                      for (int i = 0; i < beerNames.size(); i++) {
                          System.out.println(beerNames.get(i).text());
-                         System.out.println(beerInfos.get(i).text());
+                         System.out.println(beerInfo.get(i).text());
                      }
                 }).start();
             }

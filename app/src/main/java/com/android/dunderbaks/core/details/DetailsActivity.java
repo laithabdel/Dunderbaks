@@ -20,7 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
         TextView price = findViewById(R.id.item_price);
         ImageView itemImage = findViewById(R.id.item_image);
         ImageView arrow = findViewById(R.id.back_img_view);
-        itemImage.setImageResource(menuItem.getImageURL());
+        itemImage.setImageResource(menuItem.getResID());
         name.setText(menuItem.getName());
         price.setText(menuItem.getPrice());
         arrow.setClickable(true);
