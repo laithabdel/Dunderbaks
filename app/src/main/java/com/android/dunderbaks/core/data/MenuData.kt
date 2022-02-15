@@ -9,26 +9,196 @@ class MenuData {
 
     private fun generateKids() {
         val list: MutableList<MenuItem> = LinkedList()
+
+        list.add(MenuItem("Peanut Butter and Jelly",
+            "$3.99",
+            "You can substitute marshmallow fluff or Nutella for the jelly.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Real German Wiener (Hot Dog & Chips)",
+            "$4.99",
+            "Our Wienerwurst on a hot dog bun with potato chips. Substitute chips with Pommes or Potato Pancakes for an additional cost.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Chicken Nuggets and Chips",
+            "$4.99",
+            "Fried chicken nuggets with potato chips. Substitute chips with Pommes or Potato Pancakes for an additional cost.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Grilled Cheese",
+            "$4.99",
+            "Grilled American cheese sandwich with potato chips. Substitute chips with Pommes or Potato Pancakes for an additional cost.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("German Bologna",
+            "$5.99",
+            "A plain German Bologna sandwich. Substitute chips with Pommes or Potato Pancakes for an additional cost.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Ginger Snaps",
+            "$1.00",
+            "A plate of Ginger wafers to snack on.",
+            R.mipmap.ic_jager))
+
         menuData.add(list)
     }
 
     private fun generateSoftDrinks() {
         val list: MutableList<MenuItem> = LinkedList()
+
+        list.add(MenuItem("Raspberry Tea",
+            "$1.99",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Freshly Brewed Iced Tea",
+            "$1.99",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Freshly Brewed Sweet Tea",
+            "$1.99",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Perrier",
+            "$1.99",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Regular/Decaf Coffee, Hot Tea",
+            "$1.79",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Milk",
+            "$1.99",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("IBC Bottled Root Beer",
+            "$2.29",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Bottled Spring Water",
+            "$1.25",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Selected Juices",
+            "$1.99",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Draft Root Beer",
+            "$2.59",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Draft Cream Soda",
+            "$2.59",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Sprecher Bottled Flavored Soda",
+            "$2.99",
+            "",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Spezi",
+            "$3.89",
+            "A German staple. Citrus-flavored cola in a can.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Mezzo Mix",
+            "$2.59",
+            "Citrus soda in a can.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Fanta",
+            "$2.59",
+            "German imported Fanta, the original.",
+            R.mipmap.ic_jager))
+
         menuData.add(list)
     }
 
     private fun generateVegetarian() {
         val list: MutableList<MenuItem> = LinkedList()
+
+        list.add(MenuItem("Veggie Cheese Spatzle",
+            "$10.99",
+            "Our famous Spatzle cooked with onion, peppers, and your choice of cheese.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Tofu Bratwurst",
+            "$6.99",
+            "Tofu bratwurst cooked in a dark ale by Full Sail Brewing. Vegan.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Grilled Smoked Gouda, Tomato, and Spinach Sandwich",
+            "$5.99",
+            "Melted, Smoked Gouda cheese with spinach and tomato on your choice of bread.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Meatless Reuben",
+            "$4.99",
+            "Grilled Swiss cheese with sauerkraut and 1000 island dressing on Rye.",
+            R.mipmap.ic_jager))
+
         menuData.add(list)
     }
 
     private fun generateDessert() {
         val list: MutableList<MenuItem> = LinkedList()
+
+        list.add(MenuItem("Hausmade Black Forest Cake",
+            "$7.99",
+            "Chocolate cake with whipped cream icing, layered using Kirsch Liquor.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Hausmade Apple Strudel",
+            "$7.99",
+            "Bayrischer Apfelstrudel. Oven baked with roasted apples, raisins, rum, and nuts. Add a scoop of ice cream for $1.99.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Hausmade German Chocolate Cake with Coconut",
+            "$7.99",
+            "A chocolate cake covered and layered with a coconut chocolate cream icing",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Draft Root Beer Float",
+            "$4.99",
+            "Our famous draft root beer from Sprecher brewing with a scoop of vanilla ice cream.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Youngs Double Chocolate Stout Float",
+            "$6.99",
+            "England's famous Youngs Double Chocolate Stout with a scoop of vanilla ice cream.",
+            R.mipmap.ic_jager))
+
         menuData.add(list)
     }
 
     private fun generateSausages() {
         val list: MutableList<MenuItem> = LinkedList()
+
+        list.add(MenuItem("Bavarian Bratwurst",
+            "$6.99",
+            "Lightly spiced pork and veal white sausage.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Smoked Bauernwurst",
+            "$6.99",
+            "Smoked pork and beef sausage with marjoram.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Polish Kielbasa",
+            "$6.99",
+            "Coarsely ground pork and beef sausage with spices.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Wienerwurst",
+            "$6.29",
+            "Our famous foot long pork and beef hot dog with a hard casing.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Knackwurst",
+            "$6.99",
+            "Finely ground pork and beef bologna sausage with a hard casing.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Weisswurst",
+            "$6.99",
+            "Finely chopped, white pork and veal sausage with parsley.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Andouille",
+            "$6.99",
+            "A very spicy Cajun sausage, coarsely ground and with cayenne pepper.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Debrizener",
+            "$6.29",
+            "Foot long, paprika spiced Hungarian kielbasa sausage.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Nurenberger Bratwurst",
+            "$6.99",
+            "Two thin spiced pork and veal sausages.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Tofu Bratwurst",
+            "$6.99",
+            "Tofu bratwurst cooked in a dark ale by Full Sail Brewing. Vegan.",
+            R.mipmap.ic_jager))
+
         menuData.add(list)
     }
 
