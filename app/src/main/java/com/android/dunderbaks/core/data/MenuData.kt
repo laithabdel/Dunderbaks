@@ -8,32 +8,93 @@ class MenuData {
     var menuData: MutableList<List<MenuItem>> = LinkedList()
 
     private fun generateKids() {
-        val list: List<MenuItem> = LinkedList()
+        val list: MutableList<MenuItem> = LinkedList()
         menuData.add(list)
     }
 
     private fun generateSoftDrinks() {
-        val list: List<MenuItem> = LinkedList()
+        val list: MutableList<MenuItem> = LinkedList()
         menuData.add(list)
     }
 
     private fun generateVegetarian() {
-        val list: List<MenuItem> = LinkedList()
+        val list: MutableList<MenuItem> = LinkedList()
         menuData.add(list)
     }
 
     private fun generateDessert() {
-        val list: List<MenuItem> = LinkedList()
+        val list: MutableList<MenuItem> = LinkedList()
         menuData.add(list)
     }
 
     private fun generateSausages() {
-        val list: List<MenuItem> = LinkedList()
+        val list: MutableList<MenuItem> = LinkedList()
         menuData.add(list)
     }
 
     private fun generateClassicSand() {
-        val list: List<MenuItem> = LinkedList()
+        val list: MutableList<MenuItem> = LinkedList()
+
+        list.add(MenuItem("Corned Beef",
+            "$6.99",
+            "Thinly sliced Corned Beef. Served warm.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Liverwurst",
+            "$6.99",
+            "German Braunschweiger, served with raw onion.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Roast Beef",
+            "$6.99",
+            "Medium-rare Roast Beef, thinly sliced.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Black Forest Ham",
+            "$6.49",
+            "Sweet, smoked Black Forest Ham.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Pastrami",
+            "$6.99",
+            "Brisket cut. Coated in Peppercorn and marbled. Served warm.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Turkey Breast",
+            "$5.99",
+            "Topped with lettuce, tomato, and mayo.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Veal Bologna",
+            "$5.99",
+            "Thinly sliced Bavarian pork and veal Bologna",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Tuna Salad",
+            "$5.99",
+            "Haus made with celery and dill. Topped with lettuce and mayo.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Chicken Salad",
+            "$6.49",
+            "Haus made brined Chicken breast topped with lettuce and mayo.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("German Bologna",
+            "$5.99",
+            "Finely ground authentic German Bologna.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Tuna Melt with Swiss",
+            "$6.99",
+            "Haus made Tuna Salad with Swiss. Served grilled.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Grilled Cheese",
+            "$4.99",
+            "Choose from our selection of cheese: Swiss, Havarti, Provolone, American. $1 extra for Smoked Gouda or Greyere. Add bacon for $1.99, tomato for .39¢, or Obatzda for $1.79.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Cured Hams (Schinken)",
+            "$8.99",
+            "Choose one of our cured hams: Westphalian, Lachsschinken, Nusschinken. Served with cream cheese.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("BLT",
+            "$6.99",
+            "Our bacon is cured with brown sugar & pepper. Toasted and served with mayo.",
+            R.mipmap.ic_jager))
+        list.add(MenuItem("Genoa Salami",
+            "$6.49",
+            "An order of Salami, add for little more a la carte.",
+            R.mipmap.ic_jager))
         menuData.add(list)
     }
 
