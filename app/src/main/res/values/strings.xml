@@ -12,4 +12,17 @@
     <string name="specialty_sandwiches">Specialty Sandwiches</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_frag_header">home_frag_header</string>
+    <string name="dinner_with_sides">Dinner With Sides</string>
+    <string name="side_items">Side Items</string>
+    <string name="classic_sandwiches">Classic Sandwiches</string>
+    <string name="sausages">Sausages</string>
+    <string name="vegetarian_options">Vegetarian Options</string>
+    <string name="desserts">Desserts</string>
+    <string name="kids_menu">Kids Menu</string>
+    <string name="soft_drinks">Soft Drinks</string>
+    <string name="contact">Contact</string>
+    <string name="about_us">About Us</string>
+    <string name="menu_frag_header">menu_frag_header</string>
+    <string name="tap_list_frag_header">tap_list_frag_header</string>
 </resources>

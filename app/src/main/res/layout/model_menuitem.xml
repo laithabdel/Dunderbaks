@@ -2,41 +2,46 @@
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
-    app:cardBackgroundColor="#ffffff"
+    app:cardBackgroundColor="@color/yellow"
     app:cardCornerRadius="5dp"
     app:cardElevation="10dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/menuItemImage"
-            android:layout_width="213dp"
-            android:layout_height="177dp"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/ic_jager" />
 
         <TextView
             android:id="@+id/menuItemName"
-            android:layout_width="0dp"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/germania_one"
+            android:gravity="center"
             android:text="Jager Schnitzel"
+            android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/menuItemImage" />
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".core.home.HomeFragment">
 
+    <ImageView
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/home_frag_header"
+        android:src="@drawable/home_frag_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
@@ -21,4 +30,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center_horizontal" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val navView = findViewById<BottomNavigationView>(R.id.nav_view)
-
         val appBarConfiguration = AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_tap_list, R.id.navigation_menu)
                 .build()

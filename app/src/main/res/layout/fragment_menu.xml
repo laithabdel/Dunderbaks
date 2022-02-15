@@ -10,8 +10,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".core.menu.MenuFragment"
-        android:background="#EBFF00">
+        tools:context=".core.menu.MenuFragment">
+
+        <ImageView
+            android:id="@+id/menuFragHeader"
+            android:layout_width="600dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/menu_frag_header"
+            android:src="@drawable/menu_frag_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/soupsSaladsText"
@@ -42,7 +51,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Dinner With Sides"
+            android:text="@string/dinner_with_sides"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvSoupsSalads" />
@@ -86,7 +95,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Side Items"
+            android:text="@string/side_items"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvDinnerWithoutSides" />
@@ -130,7 +139,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Classic Sandwiches"
+            android:text="@string/classic_sandwiches"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvSpecialtySand" />
@@ -152,7 +161,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Sausages"
+            android:text="@string/sausages"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvClassicSand" />
@@ -174,7 +183,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Vegetarian Options"
+            android:text="@string/vegetarian_options"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvSausages" />
@@ -196,7 +205,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Desserts"
+            android:text="@string/desserts"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvVegetarian" />
@@ -218,7 +227,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Kids Menu"
+            android:text="@string/kids_menu"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvDesserts" />
@@ -240,7 +249,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="32dp"
-            android:text="Soft Drinks"
+            android:text="@string/soft_drinks"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvKids" />
@@ -256,30 +265,16 @@
             app:layout_constraintTop_toBottomOf="@id/softDrinksText" />
 
         <TextView
-            android:id="@+id/menuText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="center_horizontal"
-            android:text="@string/menu"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/appetizersText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="24dp"
             android:text="@string/appetizers"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/menuText" />
+            app:layout_constraintTop_toBottomOf="@+id/menuFragHeader" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAppetizers"
