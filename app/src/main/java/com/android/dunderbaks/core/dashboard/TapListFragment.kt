@@ -10,18 +10,32 @@ import android.view.ViewGroup
 import android.webkit.JavascriptInterface
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ProgressBar
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.android.dunderbaks.R
+import com.android.dunderbaks.core.adapter.DraftItemAdapter
+
+import com.android.dunderbaks.core.model.TapListItem
 import org.jsoup.Jsoup
+import java.util.*
+
 
 class TapListFragment : Fragment() {
+    val tapList: MutableList<TapListItem> = LinkedList()
+
     @SuppressLint("AddJavascriptInterface", "SetJavaScriptEnabled")
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         val root = inflater.inflate(R.layout.fragment_tap_list, container, false)
         val webView = root.findViewById<WebView>(R.id.wvTapList)
+        val rvTapList = root.findViewById<RecyclerView>(R.id.rvTapList)
+        val spinner = root.findViewById<ProgressBar>(R.id.progressBar1)
+
         webView.loadUrl("https://www.buildabeer.org/WhatsOnTapAt/WhatsOnTapAtApp.php?BarID=USAFL00014")
         webView.clearCache(true)
         webView.settings.javaScriptEnabled = true
@@ -44,12 +58,29 @@ class TapListFragment : Fragment() {
                     val beerNames = doc.select("span.BName")
                     val beerInfo = doc.select("span.BI")
                     for (i in beerNames.indices) {
-                        println("Beer Name: " + beerNames[i].text())
-                        println("Beer Info: " + beerInfo[i].text())
+                        val tapListItem = TapListItem()
+                        if(beerNames[i].text().trim() == "Empty" || beerNames[i].text().trim() == "Offline" || beerNames[i].text().trim() == "")
+                            continue
+                        tapListItem.name = beerNames[i].text().trim()
+                        tapListItem.description = beerInfo[i].text().trim()
+                        tapList.add(tapListItem)
+                    }
+
+                    // try to touch View of UI thread
+                    activity?.runOnUiThread{
+                        setupRecyclerView(rvTapList, tapList, root)
+                        spinner.visibility = View.GONE
                     }
                 }.start()
+
             }
         }
+
+//        val testList: MutableList<TapListItem> = LinkedList()
+//        testList.add(TapListItem("Test", "Test"))
+
+//        setupRecyclerView(rvTapList, testList, root)
+
         return root
     }
 
@@ -60,6 +91,28 @@ class TapListFragment : Fragment() {
         @JavascriptInterface
         fun showHTML(_html: String?) {
             html = _html
+        }
+    }
+
+    private fun setupRecyclerView(rv: RecyclerView?, tapList: List<TapListItem?>, view: View) {
+        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(view.context, RecyclerView.VERTICAL, false)
+        rv!!.layoutManager = layoutManager
+        val adapter = DraftItemAdapter(view.context, tapList)
+        rv.adapter = adapter
+    }
+
+    private fun refreshFragment(context: Context?){
+        context?.let {
+            val fragmentManager = (context as? AppCompatActivity)?.supportFragmentManager
+            fragmentManager?.let {
+                val currentFragment = fragmentManager.findFragmentById(R.id.nav_host_fragment)
+                currentFragment?.let {
+                    val fragTransaction = fragmentManager.beginTransaction()
+                    fragTransaction.detach(it)
+                    fragTransaction.attach(it)
+                    fragTransaction.commit()
+                }
+            }
         }
     }
 }

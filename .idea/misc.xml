@@ -10,7 +10,9 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.17479338842975206" />
         <entry key="app/src/main/res/layout/fragment_tap_list.xml" value="0.14363636363636365" />
-        <entry key="app/src/main/res/layout/model_menuitem.xml" value="0.3491847826086957" />
+        <entry key="app/src/main/res/layout/model_draftitem.xml" value="0.2882006638205693" />
+        <entry key="app/src/main/res/layout/model_menuitem.xml" value="0.15649867374005305" />
+        <entry key="app/src/main/res/layout/popup_window.xml" value="0.21532846715328466" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.13157894736842105" />
       </map>
     </option>

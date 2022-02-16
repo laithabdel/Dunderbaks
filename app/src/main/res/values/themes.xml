@@ -32,4 +32,9 @@
         <item name="android:fontFamily">@font/tamaki</item>
     </style>
 
+    <style name="Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_dismiss</item>
+    </style>
+
 </resources>
