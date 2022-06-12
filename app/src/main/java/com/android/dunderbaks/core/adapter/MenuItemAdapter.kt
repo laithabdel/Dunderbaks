@@ -1,5 +1,6 @@
 package com.android.dunderbaks.core.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -40,6 +41,7 @@ class MenuItemAdapter(private val context: Context?, private val menuItemList: L
         private val image: ImageView = itemView.findViewById(R.id.menuItemImage)
         private val parent by lazy { parent }
 
+        @SuppressLint("ClickableViewAccessibility")
         fun bind(position: Int) {
             val menuItem = menuItemList[position]
             val card = itemView.findViewById<CardView>(R.id.menuItemCard)
@@ -73,7 +75,7 @@ class MenuItemAdapter(private val context: Context?, private val menuItemList: L
                 popupWindow.showAtLocation(itemView, Gravity.CENTER, 0, 0)
 
 
-                popUpView.setOnTouchListener { v, event ->
+                popUpView.setOnTouchListener { _, _ ->
                     popupWindow.dismiss()
                     true
                 }

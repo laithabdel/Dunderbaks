@@ -21,6 +21,6 @@ class DetailsActivity : AppCompatActivity() {
         name.text = menuItem.name
         price.text = menuItem.price
         arrow.isClickable = true
-        arrow.setOnClickListener { view: View? -> finish() }
+        arrow.setOnClickListener { _: View? -> finish() }
     }
 }
