@@ -2,7 +2,7 @@ package com.android.dunderbaks
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_tap_list, R.id.navigation_menu)
                 .build()
-        val navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navView, navController)
         supportActionBar!!.hide()
