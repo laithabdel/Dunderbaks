@@ -13,7 +13,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 //TODO: Format Beer List
 //TODO: If possible to dim background when Popup Window shows
 //TODO: Add food images
-//TODO: Possibly work on making regular theme not dark, leave dark theme dark
 //TODO: Get high res logo svg from JB for the Splash screen
 
 class MainActivity : AppCompatActivity() {
@@ -29,5 +28,7 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navView, navController)
         supportActionBar!!.hide()
+
+
     }
 }

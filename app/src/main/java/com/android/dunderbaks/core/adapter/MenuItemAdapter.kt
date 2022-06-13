@@ -2,22 +2,24 @@ package com.android.dunderbaks.core.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.view.Gravity
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
+import android.view.*
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.android.dunderbaks.R
 import com.android.dunderbaks.core.adapter.MenuItemAdapter.MenuItemViewHolder
 import com.android.dunderbaks.core.model.MenuItem
 
 
-class MenuItemAdapter(private val context: Context?, private val menuItemList: List<MenuItem?>) : RecyclerView.Adapter<MenuItemViewHolder>() {
+class MenuItemAdapter(private val context: Context?, private val activity: FragmentActivity?, private val menuItemList: List<MenuItem?>) : RecyclerView.Adapter<MenuItemViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuItemViewHolder {
         val view = LayoutInflater.from(context)
@@ -40,6 +42,7 @@ class MenuItemAdapter(private val context: Context?, private val menuItemList: L
         private val name: TextView = itemView.findViewById(R.id.menuItemName)
         private val image: ImageView = itemView.findViewById(R.id.menuItemImage)
         private val parent by lazy { parent }
+        private var dimValue = 255
 
         @SuppressLint("ClickableViewAccessibility")
         fun bind(position: Int) {
@@ -47,10 +50,9 @@ class MenuItemAdapter(private val context: Context?, private val menuItemList: L
             val card: CardView = itemView.findViewById(R.id.menuItemCard)
 
             card.setOnClickListener {
+
                 val popUpView: View = LayoutInflater.from(itemView.context)
                     .inflate(R.layout.popup_window, parent, false)
-
-                //add sub views to set text and image
 
                 val popUpImg = popUpView.findViewById<ImageView>(R.id.menuItemImage)
                 if (menuItem != null) {
@@ -74,15 +76,34 @@ class MenuItemAdapter(private val context: Context?, private val menuItemList: L
                 popupWindow.animationStyle = R.style.Animation
                 popupWindow.showAtLocation(itemView, Gravity.CENTER, 0, 0)
 
+                var overlay: ViewGroupOverlay?
+                val dim: Drawable = ColorDrawable(Color.BLACK)
+                if(activity != null) {
+                    if(dimValue == 255) {
+                        dimValue /= 2
+                        dim.alpha = dimValue
+                    }
+                    val container: ConstraintLayout = activity.findViewById(R.id.container)
+                    dim.setBounds(0, 0, container.width, container.height)
+                    overlay = container.overlay
+                    overlay.add(dim)
+                }
 
-                popUpView.setOnTouchListener { _, _ ->
+                popUpView.setOnClickListener {
                     popupWindow.dismiss()
-                    true
+                }
+
+                popupWindow.setOnDismissListener {
+                    while(activity == null);
+                    val container: ConstraintLayout = activity.findViewById(R.id.container)
+                    overlay = container.overlay
+                    overlay?.clear()
+                    dimValue = 255
+                    dim.alpha = dimValue
                 }
             }
 
-
-                name.text = menuItem?.name
+            name.text = menuItem?.name
             if (menuItem != null) {
                 image.setImageResource(menuItem.resID)
             }

@@ -14,8 +14,6 @@ A
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-a
-1app/src/main/res/navigation/mobile_navigation.xml,5/0/50c7987ff387678f825775665976b5fc8ed47989
 y
 Iapp/src/main/java/com/android/dunderbaks/core/adapter/DraftItemAdapter.kt,5/a/5a370d69aa7faab7a4736ea2e8dad7e17197d450
 x
@@ -86,8 +84,6 @@ r
 Bapp/src/main/java/com/android/dunderbaks/core/model/TapListItem.kt,1/d/1d67b45cbc4ea4f7bf250f437651c3b8805727ca
 z
 Japp/src/main/java/com/android/dunderbaks/core/dashboard/TapListFragment.kt,9/3/9365af91ddae2c0e777f30d8db64b5f1c117a2c7
-P
- app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 @

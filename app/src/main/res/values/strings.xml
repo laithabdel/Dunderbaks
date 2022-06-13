@@ -29,4 +29,6 @@
     <string name="test">Test</string>
     <string name="jager_schnitzel">Jager Schnitzel</string>
     <string name="dunderbaks_food_item">Dunderbaks Food Item</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
 </resources>

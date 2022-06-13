@@ -69,7 +69,7 @@ class MenuFragment : Fragment() {
     private fun setupRecyclerView(rv: RecyclerView?, menuItemList: List<MenuItem?>, view: View) {
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(view.context, RecyclerView.HORIZONTAL, false)
         rv!!.layoutManager = layoutManager
-        val adapter = MenuItemAdapter(view.context, menuItemList)
+        val adapter = MenuItemAdapter(view.context, activity, menuItemList)
         rv.adapter = adapter
     }
 }
