@@ -25,4 +25,8 @@
     <string name="about_us">About Us</string>
     <string name="menu_frag_header">menu_frag_header</string>
     <string name="tap_list_frag_header">tap_list_frag_header</string>
+    <string name="dunderbaks_logo">Dunderbaks Logo</string>
+    <string name="test">Test</string>
+    <string name="jager_schnitzel">Jager Schnitzel</string>
+    <string name="dunderbaks_food_item">Dunderbaks Food Item</string>
 </resources>

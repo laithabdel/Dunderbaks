@@ -44,7 +44,7 @@ class MenuItemAdapter(private val context: Context?, private val menuItemList: L
         @SuppressLint("ClickableViewAccessibility")
         fun bind(position: Int) {
             val menuItem = menuItemList[position]
-            val card = itemView.findViewById<CardView>(R.id.menuItemCard)
+            val card: CardView = itemView.findViewById(R.id.menuItemCard)
 
             card.setOnClickListener {
                 val popUpView: View = LayoutInflater.from(itemView.context)

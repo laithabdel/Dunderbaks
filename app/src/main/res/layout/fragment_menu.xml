@@ -29,7 +29,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/soups_salads"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvAmerApp" />
 
@@ -49,7 +49,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/dinner_with_sides"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvSoupsSalads" />
 
@@ -69,7 +69,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/dinner_without_sides"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvDinnerWithSides" />
 
@@ -89,7 +89,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/side_items"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvDinnerWithoutSides" />
 
@@ -109,7 +109,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/specialty_sandwiches"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvSides" />
 
@@ -129,7 +129,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/classic_sandwiches"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvSpecialtySand" />
 
@@ -149,7 +149,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/sausages"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvClassicSand" />
 
@@ -169,7 +169,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/vegetarian_options"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvSausages" />
 
@@ -189,7 +189,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/desserts"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvVegetarian" />
 
@@ -209,7 +209,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/kids_menu"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvDesserts" />
 
@@ -229,7 +229,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/soft_drinks"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rvKids" />
 
@@ -249,9 +249,10 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:text="@string/appetizers"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/menuFragHeader" />
+            app:layout_constraintTop_toBottomOf="@+id/menuFragHeader"
+            />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAppetizers"
@@ -270,7 +271,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
             android:text="@string/american_appetizers"
-            android:textSize="20sp"
+            style="@style/Header"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rvAppetizers" />
 
