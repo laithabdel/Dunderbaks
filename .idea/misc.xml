@@ -3,13 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_bier.xml" value="0.187" />
+        <entry key="app/src/main/res/drawable/tap_list_frag_header.xml" value="0.1" />
         <entry key="app/src/main/res/font/tamaki.xml" value="0.10208333333333333" />
         <entry key="app/src/main/res/layout/activity_details.xml" value="0.29740080824559345" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.12512664640324214" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.13914473684210527" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.17479338842975206" />
-        <entry key="app/src/main/res/layout/fragment_tap_list.xml" value="0.14363636363636365" />
+        <entry key="app/src/main/res/layout/fragment_tap_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/model_draftitem.xml" value="0.2882006638205693" />
         <entry key="app/src/main/res/layout/model_menuitem.xml" value="0.15649867374005305" />
         <entry key="app/src/main/res/layout/popup_window.xml" value="0.21532846715328466" />

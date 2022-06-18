@@ -51,14 +51,19 @@ class TapListFragment : Fragment() {
                     while (jInterface.html == null);
                     val html: String = jInterface.html?: ""
                     val doc = Jsoup.parse(html)
+                    val beerIds = doc.select("span[id^=BeerNameId]")
+                    println(beerIds)
                     val beerNames = doc.select("span.BName")
                     val beerInfo = doc.select("span.BI")
                     for (i in beerNames.indices) {
+                        if (i == 66)
+                            break
                         val tapListItem = TapListItem()
                         if(beerNames[i].text().trim() == "Empty" || beerNames[i].text().trim() == "Offline" || beerNames[i].text().trim() == "")
                             continue
                         tapListItem.name = beerNames[i].text().trim()
                         tapListItem.description = beerInfo[i].text().trim()
+//                        println(tapListItem.description)
                         tapList.add(tapListItem)
                     }
 

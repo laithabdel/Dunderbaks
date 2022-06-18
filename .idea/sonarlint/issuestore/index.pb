@@ -16,8 +16,6 @@ A
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 y
 Iapp/src/main/java/com/android/dunderbaks/core/adapter/DraftItemAdapter.kt,5/a/5a370d69aa7faab7a4736ea2e8dad7e17197d450
-x
-Happ/src/main/java/com/android/dunderbaks/core/details/DetailsActivity.kt,3/6/3667410e000356852bc801f420c51f05588d3f6a
 F
 app/proguard-rules.pro,9/e/9e08934d811afe28fbc77aaa3c0d747b94348db9
 •
@@ -80,10 +78,6 @@ s
 Capp/src/main/java/com/android/dunderbaks/core/home/HomeViewModel.kt,2/e/2e0eefb14422f4c3b83321001ffce7c632012a0d
 o
 ?app/src/main/java/com/android/dunderbaks/core/model/MenuItem.kt,9/3/93ca139f01e04c5868f0e12d026399795ea09c2e
-r
-Bapp/src/main/java/com/android/dunderbaks/core/model/TapListItem.kt,1/d/1d67b45cbc4ea4f7bf250f437651c3b8805727ca
-z
-Japp/src/main/java/com/android/dunderbaks/core/dashboard/TapListFragment.kt,9/3/9365af91ddae2c0e777f30d8db64b5f1c117a2c7
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
 @

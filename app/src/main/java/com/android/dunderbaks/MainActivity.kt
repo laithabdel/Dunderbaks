@@ -7,11 +7,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-//TODO: Make fragments for About Me and Contacts
-//TODO: Hard code data for Home Fragment
-//TODO: Link 4 Service buttons to their respective app/website
 //TODO: Format Beer List
-//TODO: If possible to dim background when Popup Window shows
+//TODO: Make fragments for About Me and Contacts
+//TODO: Hard code data for Text Fragments
+//TODO: Link 4 Service buttons to their respective app/website
 //TODO: Add food images
 //TODO: Get high res logo svg from JB for the Splash screen
 
