@@ -10,7 +10,6 @@
     <string name="american_appetizers">American Appetizers</string>
     <string name="dinner_without_sides">Dinner without Sides</string>
     <string name="specialty_sandwiches">Specialty Sandwiches</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_frag_header">home_frag_header</string>
     <string name="dinner_with_sides">Dinner With Sides</string>

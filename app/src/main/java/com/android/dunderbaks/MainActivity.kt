@@ -12,7 +12,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 //TODO: Hard code data for Text Fragments
 //TODO: Link 4 Service buttons to their respective app/website
 //TODO: Add food images
-//TODO: Get high res logo svg from JB for the Splash screen
+//TODO: Get high res logo svg from JB for the Splash screen, make images screen compatible with portrait/landscape modes and diff screen sizes
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +27,5 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navView, navController)
         supportActionBar!!.hide()
-
-
     }
 }
